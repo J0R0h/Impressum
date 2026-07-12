@@ -2,26 +2,146 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Impressum</title>
+  <style>
+    :root {
+      --bg: #05070d;
+      --panel: rgba(10, 14, 26, 0.92);
+      --blue: #00b7ff;
+      --blue2: #1e90ff;
+      --text: #e8f1ff;
+      --muted: #9fb4d1;
+      --border: rgba(0, 183, 255, 0.45);
+      --shadow: 0 0 14px rgba(0, 183, 255, 0.35), 0 0 30px rgba(0, 183, 255, 0.12);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top, rgba(0, 183, 255, 0.16), transparent 35%),
+        linear-gradient(180deg, #070a12 0%, #03040a 100%);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 40px 16px;
+    }
+
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .header {
+      padding: 28px 30px;
+      border-bottom: 1px solid rgba(0, 183, 255, 0.2);
+      background: linear-gradient(90deg, rgba(0,183,255,0.15), rgba(30,144,255,0.05));
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.2rem;
+      color: var(--blue);
+      text-shadow: 0 0 8px rgba(0,183,255,0.8), 0 0 18px rgba(0,183,255,0.25);
+      letter-spacing: 0.5px;
+    }
+
+    .subtitle {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .content {
+      padding: 28px 30px 34px;
+      line-height: 1.7;
+      font-size: 1.02rem;
+    }
+
+    .box {
+      margin: 18px 0;
+      padding: 18px 20px;
+      border: 1px solid rgba(0,183,255,0.25);
+      border-radius: 14px;
+      background: rgba(3, 8, 18, 0.75);
+      box-shadow: inset 0 0 0 1px rgba(0,183,255,0.06);
+    }
+
+    h2 {
+      margin: 0 0 10px;
+      color: #7fd9ff;
+      font-size: 1.2rem;
+    }
+
+    a {
+      color: #39c8ff;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(57,200,255,0.35);
+    }
+
+    a:hover {
+      color: white;
+      border-bottom-color: white;
+    }
+
+    .footer {
+      padding: 16px 30px 24px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      border-top: 1px solid rgba(0, 183, 255, 0.15);
+    }
+
+    .glowline {
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--blue), transparent);
+      box-shadow: 0 0 12px rgba(0,183,255,0.8);
+    }
+  </style>
 </head>
 <body>
-  <h1>Impressum</h1>
+  <div class="wrap">
+    <div class="header">
+      <h1>Impressum</h1>
+      <div class="subtitle">Offizielle Kontakt- und Anbieterangaben</div>
+    </div>
+    <div class="glowline"></div>
 
-  <p>
-    Diensteanbieter gemäß § 7 Abs. 1 TMG:
-  </p>
-  <p>
-    Max Mustermann<br>
-    Musterstraße 1<br>
-    12345 Musterstadt
-  </p>
-  <p>
-    E‑Mail: max@muster.de
-  </p>
+    <div class="content">
+      <div class="box">
+        <h2>Angaben gemäß § 5 DDG</h2>
+        <p>
+          Max Mustermann<br>
+          Musterstraße 1<br>
+          12345 Musterstadt<br>
+          Deutschland
+        </p>
+      </div>
 
-  <p>
-    Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:
-    Max Mustermann
-  </p>
+      <div class="box">
+        <h2>Kontakt</h2>
+        <p>
+          E-Mail: <a href="mailto:max@muster.de">max@muster.de</a>
+        </p>
+      </div>
+
+      <div class="box">
+        <h2>Verantwortlich für den Inhalt</h2>
+        <p>
+          Max Mustermann
+        </p>
+      </div>
+    </div>
+
+    <div class="footer">
+      Stand: 2026
+    </div>
+  </div>
 </body>
 </html>
